@@ -262,16 +262,37 @@
     </div>
     <div class="container">
         <h3>Form from table</h3>
-        <table>
-            <tr>
-                <th>SỞ THÍCH CỦA BẠN</th>
+        <table class="bg-white" border="1">
+            <tr class="bg-danger text-center">
+                <th colspan="7">SỞ THÍCH CỦA BẠN</th>
             </tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
+            <tr>
+                <td>Họ và tên</td>
+               <td colspan="3"><input type="text" class="w-100"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td colspan="3"><input type="text" class="w-100"></td>
+            </tr>
+            <tr>
+                <td rowspan="3">Sở thích</td>
+                <td><input type="checkbox"> Thể thao</td>
+                <td><input type="checkbox"> Âm nhạc</td>
+                <td><input type="checkbox"> Đọc sách</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"> Lướt web</td>
+                <td><input type="checkbox"> Chơi game</td>
+                <td><input type="checkbox"> Điện ảnh</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"> Du lịch</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="btn btn-dark">Gửi thông tin</button></td>
+                <td><button class="btn btn-dark">Nhập lại</button></td>
+            </tr>
         </table>
     </div>
 </body>
