@@ -16,5 +16,5 @@ function getInfor() {
   let name = document.getElementById("name").value;
   let add = document.getElementById("address").value;
   let date = document.getElementById("date").value;
-  document.getElementById("resuilt").innerHTML = "Name: "+name + "- Address: " + add + "- Date: " +  date;
+  document.getElementById("result").innerHTML = "Name: "+name + "- Address: " + add + "- Date: " +  date;
 }
