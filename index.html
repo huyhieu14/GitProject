@@ -1,310 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML-Codegym</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="container">
-        <h3>Temperature switch</h3>
-        <form action="#">
+      <div class="row">
+        <div class="col-6">
+          <h3>Temperature switch</h3>
+          <form action="#">
             <label for="">Celsius: </label>
-            <input type="number" id="celsius" class="form-control">
+            <input type="number" id="celsius" class="form-control" />
             <label for="">Fahrenheit: </label>
-            <input type="number" id="result" class="form-control">
-            <button class="btn btn-dark mt-2" onclick="convert()">Convert</button>
-        </form>
+            <input type="number" id="result" class="form-control" disabled/>
+            <button class="btn btn-dark mt-2" onclick="convert()">
+              Convert
+            </button>
+          </form>
+        </div>
+        <div class="col-6">
+          <h3>DOM</h3>
+          <form action="#">
+            <input type="text" id="name" class="form-control mt-1">
+            <input type="text" id="address" class="form-control mt-1">
+            <input type="date" id="date" class="form-control mt-1">
+            <button class="btn btn-dark mt-2" onclick="getInfor()">Create</button>
+            <div id="resuilt"></div>
+          </form>
+        </div>
+        <div class="col-6">
+            <h3>Get Sum</h3>
+            <form action="#">
+                <label for="">Number a:</label>
+                <input type="number" id="numberA" class="form-control">
+                <label for="">Number b:</label>
+                <input type="number" id="numberB" class="form-control">
+                <label for="">Result :</label>
+                <input type="number" id="resultSum" class="form-control" disabled>
+                <button class="btn btn-dark mt-2" onclick="sum()">Sum</button>
+            </form>
+        </div>
+      </div>
     </div>
     <div class="container mt-3">
-        <h2>Table</h2>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Company</th>
-              <th>Contact</th>
-              <th>Country</th>
+      <h2>Table</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h3>Form</h3>
+          <form action="" class="justify-content-center form-control">
+            <div>
+              <h3>Oder Form</h3>
+            </div>
+            <div>
+              <label for="">What world you like to buy?</label><br />
+              <select class="form-select">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+              </select>
+            </div>
+            <div>
+              <label for="">What world you like to buy?</label>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="radio1"
+                  name="optradio"
+                  value="option1"
+                  checked
+                />Option 1
+                <label class="form-check-label" for="radio1"></label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="radio2"
+                  name="optradio"
+                  value="option2"
+                />Option 2
+                <label class="form-check-label" for="radio2"></label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="radio3"
+                  name="optradio"
+                  value="option3"
+                />Option 3
+                <label class="form-check-label"></label>
+              </div>
+            </div>
+            <div class="row">
+              <label for="">Name</label>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First Name"
+                  name="email"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Last Name"
+                  name="pswd"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="">Email</label>
+              <input
+                type="email"
+                class="form-control form-control-md"
+                placeholder=""
+              />
+            </div>
+            <div class="row">
+              <label for="">Phone</label>
+              <div class="col-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  name=""
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  name=""
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  name=""
+                />
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-dark mt-2">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-6">
+          <h3>Form from Table</h3>
+          <table class="bg-info table-bordered w-100">
+            <tr class="bg-danger">
+              <th colspan="2">ĐĂNG KÝ HỌC VIÊN</th>
             </tr>
-          </thead>
-          <tbody>
             <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
+              <td>
+                <p>Họ và tên</p>
+              </td>
+              <td>
+                <input type="text" class="w-100 form-control" />
+              </td>
             </tr>
             <tr>
-              <td>Centro comercial Moctezuma</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
+              <td>
+                <p>Ngày sinh</p>
+              </td>
+              <td>
+                <input type="date" class="w-100 form-control" />
+              </td>
             </tr>
             <tr>
-              <td>Ernst Handel</td>
-              <td>Roland Mendel</td>
-              <td>Austria</td>
+              <td><p>Giới tính</p></td>
+              <td><input type="radio" /> Nam <input type="radio" /> Nữ</td>
             </tr>
             <tr>
-              <td>Island Trading</td>
-              <td>Helen Bennett</td>
-              <td>UK</td>
+              <td>
+                <p>Địa chỉ</p>
+              </td>
+              <td>
+                <textarea name="" id="" class="w-100 form-control"></textarea>
+              </td>
             </tr>
             <tr>
-              <td>Laughing Bacchus Winecellars</td>
-              <td>Yoshi Tannamuri</td>
-              <td>Canada</td>
+              <td>
+                <p>Lớp</p>
+              </td>
+              <td>
+                <select name="" id="" class="w-100 form-control">
+                  <option value="">-Chọn Lớp-</option>
+                  <option value="">Lớp A</option>
+                  <option value="">Lớp B</option>
+                  <option value="">Lớp C</option>
+                </select>
+              </td>
             </tr>
             <tr>
-              <td>Magazzini Alimentari Riuniti</td>
-              <td>Giovanni Rovelli</td>
-              <td>Italy</td>
+              <td><p>Email</p></td>
+              <td>
+                <input type="email" class="w-100 form-control" />
+              </td>
             </tr>
-          </tbody>
-        </table>
+            <tr>
+              <td><p>Điện thoại</p></td>
+              <td>
+                <input type="text" class="w-100 form-control" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="text-center">
+                <button class="btn btn-dark">Submit</button>
+                <button class="btn btn-dark">Reset</button>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
-    <div class="container"> 
-        <div class="row">
-            <div class="col-6">
-                <h3>Form</h3>
-                    <form action="" class="justify-content-center form-control">
-                <div>
-                    <h3>Oder Form</h3>
-                </div>
-                <div>
-                    <label for="">What world you like to buy?</label><br>
-                    <select class="form-select">
-                        <option>A</option>
-                        <option>B</option>
-                        <option>C</option>
-                        <option>D</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="">What world you like to buy?</label>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Option 1
-                        <label class="form-check-label" for="radio1"></label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Option 2
-                        <label class="form-check-label" for="radio2"></label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input"  id="radio3" name="optradio" value="option3">Option 3
-                        <label class="form-check-label"></label>
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="">Name</label>
-                    <div class="col">
-                    <input type="text" class="form-control" placeholder="First Name" name="email">
-                    </div>
-                    <div class="col">
-                    <input type="password" class="form-control" placeholder="Last Name" name="pswd">
-                    </div>
-                </div>
-                <div>
-                    <label for="">Email</label>
-                    <input type="email" class="form-control form-control-md" placeholder="">
-                </div>
-                <div class="row">
-                    <label for="">Phone</label>
-                    <div class="col-4">
-                        <input type="text" class="form-control" placeholder="" name=""> 
-                    </div>
-                    <div class="col-4">
-                        <input type="text" class="form-control" placeholder="" name="">
-                    </div>
-                    <div class="col-4">
-                        <input type="text" class="form-control" placeholder="" name="">
-                    </div>
-                </div>
-                <div>
-                    <button class="btn btn-dark mt-2">Submit</button>
-                </div>
-            </form>
-            </div>
-            <div  class="col-6">
-                <h3>Form from Table</h3>
-                <table class="bg-info table-bordered w-100">
-                    <tr class="bg-danger" >
-                        <th colspan="2">ĐĂNG KÝ HỌC VIÊN</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Họ và tên</p>
-                        </td>
-                        <td>
-                            <input type="text" class="w-100">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Ngày sinh</p>
-                        </td>
-                        <td>
-                            <input type="date" class="w-100">
-                        </td>
-                    </tr>
-                    <tr>
-                    <td> <p>Giới tính</p></td>
-                    <td >
-                        <input type="radio"> Nam
-                        <input type="radio"> Nữ
-                    </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Địa chỉ</p>
-                        </td>
-                        <td>
-                            <textarea name="" id="" class="w-100"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Lớp</p>
-                        </td>
-                        <td>
-                            <select name="" id=""  class="w-100">
-                                <option value="">-Chọn Lớp-</option>
-                                <option value="">Lớp A</option>
-                                <option value="">Lớp B</option>
-                                <option value="">Lớp C</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><p>
-                            Email
-                        </p></td>
-                        <td>
-                            <input type="email" class="w-100">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><p>
-                            Điện thoại
-                        </p></td>
-                        <td>
-                            <input type="text" class="w-100">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="text-center">
-                        <button class="btn btn-dark">Submit</button>
-                        <button class="btn btn-dark">Reset</button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-6 mt-2">
-                <h3>UL - OL - LI</h3>
-                <ul>
-                    <li> Việt Nam
-                        <ol>
-                            <li>Hà Nội</li>
-                            <li>Sài Gòn</li>
-                            <li>Huế</li>
-                            <li>Đà Nẵng</li>
-                        </ol>
-                    </li>
-                    <li> Hoa Kỳ
-                        <ol>
-                            <li>New York</li>
-                            <li>Los Angeles</li>
-                            <li>Chicago</li>
-                            <li>Houston</li>
-                        </ol>
-                    </li>
-                    <li> Trung Quốc
-                        <ol>
-                            <li>Beijing</li>
-                            <li>Chongqing</li>
-                            <li>Shanghai</li>
-                            <li>Tianjin</li>
-                        </ol>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-6">
-                <h3>From </h3>
-                <form action="" class="form-control">
-                    <div class="mb-3 mt-3">
-                        <label for="email" class="form-label">Họ và tên:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter name" name="name">
-                      </div>
-                    <div class="mb-3 mt-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                      </div>
-                      <div class="mb-3">
-                        <label for="pwd" class="form-label">Số điện thoại:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Enter phone" name="phone">
-                      </div>
-                    <div>
-                        <div>
-                            <label for="">Giới tính</label>
-                            <div class="row">
-                                <div class="form-check col-2 ps-5">
-                                    <input type="radio" class="form-check-input" id="radio1" name="gender" value="option1" checked>Nam
-                                    <label class="form-check-label" for="radio1"></label>
-                                </div>
-                                <div class="form-check col-6">
-                                    <input type="radio" class="form-check-input" id="radio2" name="gender" value="option2">Nữ
-                                    <label class="form-check-label" for="radio2"></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="btn btn-dark mt-3">
-                            Đăng Ký
-                        </button>
-                    </div>
-                </form>
-            </div>
+      <div class="row">
+        <div class="col-6 mt-2">
+          <h3>UL - OL - LI</h3>
+          <ul>
+            <li>
+              Việt Nam
+              <ol>
+                <li>Hà Nội</li>
+                <li>Sài Gòn</li>
+                <li>Huế</li>
+                <li>Đà Nẵng</li>
+              </ol>
+            </li>
+            <li>
+              Hoa Kỳ
+              <ol>
+                <li>New York</li>
+                <li>Los Angeles</li>
+                <li>Chicago</li>
+                <li>Houston</li>
+              </ol>
+            </li>
+            <li>
+              Trung Quốc
+              <ol>
+                <li>Beijing</li>
+                <li>Chongqing</li>
+                <li>Shanghai</li>
+                <li>Tianjin</li>
+              </ol>
+            </li>
+          </ul>
         </div>
+        <div class="col-6">
+          <h3>From</h3>
+          <form action="" class="form-control">
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Họ và tên:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter name"
+                name="name"
+              />
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter email"
+                name="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Số điện thoại:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="pwd"
+                placeholder="Enter phone"
+                name="phone"
+              />
+            </div>
+            <div>
+              <div>
+                <label for="">Giới tính</label>
+                <div class="row">
+                  <div class="form-check col-2 ps-5">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="radio1"
+                      name="gender"
+                      value="option1"
+                      checked
+                    />Nam
+                    <label class="form-check-label" for="radio1"></label>
+                  </div>
+                  <div class="form-check col-6">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="radio2"
+                      name="gender"
+                      value="option2"
+                    />Nữ
+                    <label class="form-check-label" for="radio2"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-dark mt-3">Đăng Ký</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <div class="container">
-        <h3>Form from table</h3>
-        <table class="bg-white" border="1">
-            <tr class="bg-danger text-center">
-                <th colspan="7">SỞ THÍCH CỦA BẠN</th>
-            </tr>
-            <tr>
-                <td>Họ và tên</td>
-               <td colspan="3"><input type="text" class="w-100"></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td colspan="3"><input type="text" class="w-100"></td>
-            </tr>
-            <tr>
-                <td rowspan="3">Sở thích</td>
-                <td><input type="checkbox"> Thể thao</td>
-                <td><input type="checkbox"> Âm nhạc</td>
-                <td><input type="checkbox"> Đọc sách</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"> Lướt web</td>
-                <td><input type="checkbox"> Chơi game</td>
-                <td><input type="checkbox"> Điện ảnh</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"> Du lịch</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button class="btn btn-dark">Gửi thông tin</button></td>
-                <td><button class="btn btn-dark">Nhập lại</button></td>
-            </tr>
-        </table>
+      <h3>Form from table</h3>
+      <table class="bg-white" border="1">
+        <tr class="bg-danger text-center">
+          <th colspan="7">SỞ THÍCH CỦA BẠN</th>
+        </tr>
+        <tr>
+          <td>Họ và tên</td>
+          <td colspan="3"><input type="text" class="w-100 form-control" /></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td colspan="3"><input type="text" class="w-100 form-control" /></td>
+        </tr>
+        <tr>
+          <td rowspan="3">Sở thích</td>
+          <td><input type="checkbox" /> Thể thao</td>
+          <td><input type="checkbox" /> Âm nhạc</td>
+          <td><input type="checkbox" /> Đọc sách</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /> Lướt web</td>
+          <td><input type="checkbox" /> Chơi game</td>
+          <td><input type="checkbox" /> Điện ảnh</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /> Du lịch</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button class="btn btn-dark">Gửi thông tin</button></td>
+          <td><button class="btn btn-dark">Nhập lại</button></td>
+        </tr>
+      </table>
     </div>
-</body>
-<script src="/assets/js/main.js"></script>
+  </body>
+  <script src="/assets/js/main.js"></script>
 </html>
